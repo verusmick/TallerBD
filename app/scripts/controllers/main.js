@@ -7,11 +7,19 @@
  * # MainCtrl
  * Controller of the tbdApp
  */
-angular.module('tbdApp')
-  .controller('MainCtrl', function ($scope) {
+app.controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+
+    $scope.holas = ['asd', 'asd2', 'asd3'];
+
   });
+
+
+
+
+

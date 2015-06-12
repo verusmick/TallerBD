@@ -8,15 +8,15 @@
  *
  * Main module of the application.
  */
-angular
-  .module('tbdApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
-  ])
+var app = angular.module('tbdApp', [
+  'ngAnimate',
+  'ngCookies',
+  'ngResource',
+  'ngRoute',
+  'ngSanitize',
+  'ngTouch',
+  'firebase'
+])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
