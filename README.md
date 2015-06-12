@@ -1,9 +1,14 @@
+Taller de Base de Datos
+ing:KATIA LUZ MANSILLA
+============
 
+### Build & development
 
-/////////// TALLER DE BASE DE DATOS /////////
-echo # TallerBD >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/verusmick/TallerBD.git
-git push -u origin master
+* This project is generated with yo angular generator version 0.11.1.
+
+### Installation
+* Run grunt for building and grunt serve for preview.
+
+### Testing
+
+* Running grunt test will run the unit tests with karma.
