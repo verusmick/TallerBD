@@ -1,6 +1,6 @@
 Taller de Base de Datos
 ============
-###ing:KATIA LUZ MANSILLA
+###ing: Katia Luz Mansilla
 
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.11.1.
