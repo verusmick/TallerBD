@@ -2,14 +2,13 @@ Taller de Base de Datos
 ============
 ###ing:KATIA LUZ MANSILLA
 
+This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
+version 0.11.1.
 
-### Build & development
+## Build & development
 
-* This project is generated with yo angular generator version 0.11.1.
+Run `grunt` for building and `grunt serve` for preview.
 
-### Installation
-* Run grunt for building and grunt serve for preview.
+## Testing
 
-### Testing
-
-* Running grunt test will run the unit tests with karma.
+Running `grunt test` will run the unit tests with karma.
