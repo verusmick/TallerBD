@@ -1,0 +1,21 @@
+<h1>Entradas</h1>
+<table class="table table-bordered">
+	<tr>
+		<th>#</th>
+		<th>Nombre</th>
+		<th>Cantidad</th>
+		<th>Proveedor</th>
+		<th>Precio Compra</th>
+		<th>Editar</th>		
+		<th>Eliminar</th>		
+	</tr>
+	<tr ng-repeat="entrada in entradas">
+		<td>{{$index+1}}</td>
+		<td>{{entrada.nombre}}</td>
+		<td>{{entrada.cantidad}}</td>
+		<td>{{entrada.proveedor}}</td>
+		<td>{{entrada.precioCompra}}</td>
+		<td><center><span class="glyphicon glyphicon-pencil" aria-hidden="true" ng-click="editEntrada($index)" ></span></center></td>
+		<td><center><span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="deleteEntrada($index)"></span></center></td>
+	</tr>
+</table>
