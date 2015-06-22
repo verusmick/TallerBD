@@ -1,0 +1,115 @@
+
+
+
+<div class="row">
+  <div class="col-md-4"><h1>Inventario</h1></div>
+  <div class="col-md-4 col-md-offset-4"></br>
+    <!--<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModalCreate" ng-click="resetMas()" aria-hidden="true">-->
+      <!--Nueva proveedor-->
+    <!--</button>-->
+  </div>
+</div>
+<table class="table table-bordered">
+  <tr>
+    <th>#</th>
+    <th>Nombre</th>
+    <!--<th>Unidad</th>-->
+    <th>Cantidad Total</th>
+    <!--<th>Precio Compra</th>-->
+    <!--<th>Editar</th>-->
+    <!--<th>Eliminar</th>-->
+  </tr>
+  <tr ng-repeat="inventario in inventarios" data-toggle="modal" data-target="#myModal" aria-hidden="true" ng-click="inventarioDetail(inventario, $index)">
+    <td>{{$index+1}}</td>
+    <td>{{inventario.nombre}}</td>
+    <td>{{inventario.cantidadTotal}}</td>
+    <!--<td>{{inventario.proveedor.nombre}}</td>-->
+    <!--<td>{{inventario.precioCompra}}</td>-->
+    <!--<td><center><span class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#myModal" ng-click="selectEntrada($index)" aria-hidden="true"></span></center></td>-->
+    <!--<td><center><span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="deleteEntrada($index)"></span></center></td>-->
+  </tr>
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4  class="modal-title" id="myModalLabel">Detalles Inventario</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Detalles Entradas</label>
+            <table class="table table-bordered">
+              <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Proveedor</th>
+                <th>Telefono</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+              </tr>
+              <tr ng-repeat="inventario in details.entradas" data-toggle="modal" data-target="#myModal" aria-hidden="true" ng-click="inventarioDetail(inventario, $index)">
+                <td>{{$index+1}}</td>
+                <td>{{inventario.nombre}}</td>
+                <td>{{inventario.proveedor.nombre}}</td>
+                <td>{{inventario.proveedor.telefono}}</td>
+                <td>{{inventario.cantidad}}</td>
+                <td>{{inventario.precioCompra}}</td>
+              </tr>
+              <tr>
+                <td>Total</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{totales.cantidadTotal}}</td>
+                <td>{{totales.precioTotal}}</td>
+              </tr>
+            </table>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="editProv(editObject.value)" >Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--&lt;!&ndash; Modal &ndash;&gt;-->
+<!--<div class="modal fade" id="myModalCreate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
+  <!--<div class="modal-dialog" role="document">-->
+    <!--<div class="modal-content">-->
+      <!--<div class="modal-header">-->
+        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+        <!--<h4  class="modal-title" id="myModalLabel">Crear Proveedor </h4>-->
+      <!--</div>-->
+      <!--<div class="modal-body">-->
+        <!--<form>-->
+          <!--<div class="form-group">-->
+            <!--<label for="exampleInputEmail1">Nombre</label>-->
+            <!--<input type="text" ng-model = "crearObject.nombre" class="form-control"  placeholder="Nombre">-->
+          <!--</div>-->
+
+          <!--<div class="form-group">-->
+            <!--<label for="exampleInputEmail1">Telefono</label>-->
+            <!--<input type="text" ng-model = "crearObject.telefono" class="form-control"  placeholder="Telefono">-->
+          <!--</div>-->
+
+          <!--<div class="form-group">-->
+            <!--<label for="exampleInputEmail1">Direccion</label>-->
+            <!--<input type="text" ng-model = "crearObject.direccion" class="form-control"  placeholder="Direccion">-->
+          <!--</div>-->
+        <!--</form>-->
+
+      <!--</div>-->
+      <!--<div class="modal-footer">-->
+        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>-->
+        <!--<button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="crearProv()" >Guardar</button>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
