@@ -36,7 +36,7 @@ app.controller('AboutCtrl', ['$scope', '$firebaseObject', '$firebaseArray', func
           {
             nombre: 'tomate',
             precioCompra: 10,
-            cantidad: 2,
+            cantidad: 10,
             proveedor:{
               nombre:'zaragosa',
               direccion:'avenida n°123',
@@ -80,6 +80,16 @@ app.controller('AboutCtrl', ['$scope', '$firebaseObject', '$firebaseArray', func
         nombre: 'tomate',
         precioCompra: 10,
         cantidad: 5,
+        proveedor:{
+          nombre:'zaragosa',
+          direccion:'avenida n°123',
+          telefono:'12321'
+        }
+      },
+      {
+        nombre: 'tomate',
+        precioCompra: 10,
+        cantidad: 10,
         proveedor:{
           nombre:'zaragosa',
           direccion:'avenida n°123',
