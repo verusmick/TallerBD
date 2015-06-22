@@ -31,6 +31,10 @@ var app = angular.module('tbdApp', [
         templateUrl: 'views/entradas.html',
         controller: 'EntradasCtrl'
       })
+      .when('/proveedor', {
+        templateUrl: 'views/proveedor.html',
+        controller: 'ProveedorsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

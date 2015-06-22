@@ -35,18 +35,18 @@ app.controller('AboutCtrl', ['$scope', '$firebaseObject', '$firebaseArray', func
   			proveedor: 'peredo'			
   		}
   	}, 
-  	proveedor:{
-  		proveedor1:{
+  	proveedor:[
+  		{
   			nombre:'zaragosa',
   			direccion:'avenida n°123',
   			telefono:'12321',
   		},
-  		proveedor2:{
+  		{
   			nombre:'peredo',
   			direccion:'avenida n°123',
   			telefono:'12321',
   		}
-  	},
+  	],
     entradas:[      
       {
         nombre: 'tomate',
